@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4c</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse;
+            color: white;
+            
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        td, th {
+            border: 3px solid rgb(53, 57, 66);
+            width: 100px;
+            height: 65px;    
+        }
+
+        .pad, td {
+            padding-left: 15px;
+        }
+
+        thead {
+            background-color: rgb(53, 57, 66);
+        }
+
+        tbody, tfoot {
+            background-color: rgb(46, 51, 55);
+        }
+
+        thead, tbody {
+            font-weight: 300;
+        }
+
+        .foot {
+            padding-right: 15px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <col style="width: 230px"><col><col><col style="width: 230px"> <!--Пришлось создать класс pad, потому что так и не понял почему я не могу добавить свойство padding в col, другими способами работало, но, чтобы стало походить визуально как в задании решил сделать так-->
+        <thead>
+            <tr>
+                <th style="text-align: left;" class="pad">Сотрудник</th>
+                <th>Зарплата</th>
+                <th>Бонусы</th>
+                <th style="text-align: left;" class="pad">Менеджер</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Алексей Примадонин</td>
+                <td>750$</td>
+                <td>63$</td>
+                <td rowspan=2; >Кодовёнок Хекслетович</td>
+            </tr>
+            <tr>
+                <td>Вениамин Редакторович</td>
+                <td>1200$</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Джедай Падаванов</td>
+                <td>500$</td>
+                <td>100$</td>
+                <td rowspan=2; >Королева Верстальщина</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan=4 style="text-align: right;" class="foot">Всего: 2613$</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>4d</title>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin-left: 30px;
+            
+        }
+        button {
+            padding: 7px;
+            margin-bottom: 20px;
+        }
+        div {
+            line-height: 30px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        .first_tab_prerequisites {
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+        .first_tab_prerequisites td {
+            border: 1px solid #b8bab9;
+            width: 350px;
+            height: 40px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .first_tab_prerequisites th {
+            border: 1px solid #b8bab9;
+            width: 150px;
+            height: 40px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .second_tab_persons {
+            font-size: 22px;
+            margin-top: 35px;
+            margin-left: 50px;
+
+        }
+
+        .second_tab_persons th {
+            border: 1px solid #b8bab9;
+            width: 210px;
+            height: 40px;
+            border-bottom: 1px solid black;
+            background-color: RGB(190, 192, 191);
+            text-align: left;
+            padding-left: 10px;
+            font-weight: 900;
+        }
+        .second_tab_persons td {
+            border: 1px solid #b8bab9;
+            width: 210px;
+            height: 40px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>HTML table basics</h1>
+    <button><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics" target="_blank">Overwiev: Tables</a></button>
+    <div>
+        This article gets you started with HTML tables, covering the very basics such<br> as rows, cells, headings,
+        making cells span multiple columns and rows, and how<br> to group together all the cells in a column for styling purposes.
+    </div>
+    <table class="first_tab_prerequisites">
+        <col style="width: 150px"><col>
+        <tr>
+            <th><strong>Prerequisites:</stronge></th>
+            <td>The basics of HTML (see <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML" target="_blank">Introduction to HTML).</a></td>
+        </tr>
+        <tr>
+            <th><strong>Objective:</strong></th>
+            <td>To gain basic familiarity with HTML tables.</td>
+        </tr>
+    </table>
+    <h2>What is a table?</h2>
+    <div>
+        A table is a structured set of data made up of rows and columns <strong>(tabular data)</strong>.<br> A table allows you to quickly and easily
+        look up values that indicate some kind<br> of connection between different types of data, for example a person and their<br> age,
+        or a day of the week, or the timetable for a local swimming pool.
+    </div>
+    <table class="second_tab_persons">
+        <thead>
+            <tr>
+                <th>Person</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border-right: 1px solid black; background-color: #dcdcdc; text-align: left; padding-left: 10px; font-weight: 900">Chris</td>
+                <td style="text-align: right; padding-right: 10px; font-weight: 600;">38</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid black; background-color: #dcdcdc; text-align: left; padding-left: 10px; font-weight: 900">Dennis</td>
+                <td style="text-align: right; padding-right: 10px; font-weight: 600;">45</td>
+            </tr>
+             <tr>
+                <td style="border-right: 1px solid black; background-color: #dcdcdc; text-align: left; padding-left: 10px; font-weight: 900">Sarah</td>
+                <td style="text-align: right; padding-right: 10px; font-weight: 600;">29</td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid black; background-color: #dcdcdc; text-align: left; padding-left: 10px; font-weight: 900">Karen</td>
+                <td style="text-align: right; padding-right: 10px; font-weight: 600;">47</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
