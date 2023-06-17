@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userSurename = prompt('Введите вашу фамилию', 'Иванов');
+        let userName = prompt('Введите ваше имя', 'Иван');
+        let patronymic =prompt('Введите ваше отчество', 'Иванович');
+        let urAge = prompt('Ваш возраст?', 20);
+        let userGender = confirm('Ваш пол мужской?');
+        let pensionAge;
+        if (userGender === true) {
+            userGender = 'Мужской';
+        } else {
+            userGender = 'Женский';
+        }
+
+        if (userGender === 'Мужской') {
+            pensionAge = 65;
+        } else {
+            pensionAge = 60;
+        }
+
+        alert(`Ваше ФИО: ${userSurename} ${userName} ${patronymic}
+                ваш возраст в годах ${urAge}
+                ваш возраст в днях ${urAge * 365}
+                через 5 лет он будет: ${Number(urAge) + 5}
+                ваш пол: ${userGender}
+                вы на пенсии: ${urAge >= pensionAge ? "да" : "нет"}`);
+    </script>
+</body>
+</html>
