@@ -1,0 +1,6 @@
+*.zip
+first_project
+noiceland
+.DS_Store
+node_modules
+scss
