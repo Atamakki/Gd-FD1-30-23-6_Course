@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<g>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('DomContentLoaded', function() {
+
+            document.querySelector('.survey_form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let form = document.querySelector('.survey_form');
+
+                let lastname = form.querySelector("input[name='lname']").value;
+                let firstname = form.querySelector("input[name='fname']").value;
+                let fathername = form.querySelector("input[name='pname']").value;
+                let age = form.querySelector("input[name='age']").value;
+
+                let gender;
+                let selectedRadio = form.querySelector("input[name='gender']:checked")
+                if (selectedRadio) {
+                    gender = selectedRadio.value;
+                }
+
+                let genderLabel;
+                if (genderLabel === 'male') {
+                    gendelLabel = 'мужской';
+                } else {
+                    genderLabel = 'женский';
+                }
+
+                alert(`Ваше ФИО: ${lastname} ${firstname} ${fathername}
+ваш возраст в годах: ${age}
+ваш возраст в днях: ${age * 365}
+через 5 лет вам будет: ${Number(age) + 5}
+ваш пол: ${genderLabel}
+вы на пенсии: ${age >= 65 ? 'да' : 'нет'}`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Опрос</h1>
+        <form class="survey_form">
+            <div><label>Фамилия<input name='lname'></label></div>
+            <div><label>Имя<input name='fname'></label></div>
+            <div><label>Отчество<input name='pname'></label></div>
+            <div><label>Возраст в годах<input type="number" min="0" max="150" name='age'></label></div>
+
+            <div>
+                Пол:
+                <div><label>Мужской<input type="radio" name='gender' value="male"></label></div>
+                <div><label>Женский<input type="radio" name='gender' value="female"></label></div>
+            </div>
+
+            <div>
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+</body>
+</html>
