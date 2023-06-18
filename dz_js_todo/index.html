@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .todo {
+        max-width: 600px;
+        padding: 30px;
+        margin: 0 auto;
+        border: 1px solid black;
+    }
+
+    .selected_item {
+        background-color: #ccc;
+    }
+</style>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        let btn = document.querySelector(".todo_controls button");
+        btn.addEventListener('click', function() {
+            let input = document.querySelector('.todo_controls input');
+            let inputValue = input.value.trim();
+            
+            if(!inputValue) {
+                input.focus();
+                return;
+            }
+
+
+            let ul = document.querySelector('.todo_list ul');
+
+            let newItem = document.createElement('li');
+            newItem.textContent = inputValue;
+            newItem.addEventListener('click', function() {
+                let allItems = ul.querySelectorAll('li');
+                newItem.classList.add('selected_item');
+            });
+
+            newItem.addEventListener('dblclick', function(){
+                if(confirm(`Удалить ${inputValue}?`)) {
+                    newItem.remove();
+                }
+            });
+
+            ul.appendChild(newItem);
+        });
+    })
+</script>
+<body>
+    <div class="todo">
+        <div class="todo_controls">
+            <input type="text" name="name" placeholder="Введите название дела">
+            <button>Добавить</button>
+        </div>
+        <div class="todo_list">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
